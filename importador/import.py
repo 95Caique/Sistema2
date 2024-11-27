@@ -65,7 +65,7 @@ class ClienteServidorAPI:
         """
         try:
             dados_servidor = self.buscar_servidor(identificador)
-            print(f"Dados do servidor importados com sucesso: {dados_servidor['nome']}")
+            print(f"Dados do servidor importado com sucesso: {dados_servidor['nome']}")
             return dados_servidor
         except ValueError as e:
             print(f"Erro: {str(e)}")
@@ -76,7 +76,6 @@ class ClienteServidorAPI:
             return None
 
 
-# Exemplo de uso
 if __name__ == "__main__":
     # Configuração do cliente
     urls_para_testar = [
@@ -84,20 +83,16 @@ if __name__ == "__main__":
         "http://localhost:8000"
     ]
 
-    # Verifica se um identificador foi passado como argumento
     if len(sys.argv) > 1:
         identificador = sys.argv[1]
     else:
-        # Caso nenhum identificador seja fornecido, usa um padrão
-        identificador = "70441065156"  # CPF de exemplo
+        identificador = "337847"  # CPF ou matrícula para exemplo
 
-    # Tenta diferentes URLs
     for url in urls_para_testar:
         try:
             print(f"\nTestando URL base: {url}")
             cliente = ClienteServidorAPI(base_url=url)
 
-            # Exemplo de busca por CPF ou matrícula
             servidor = cliente.importar_servidor(identificador)
             if servidor:
                 print("\nDetalhes do Servidor:")
