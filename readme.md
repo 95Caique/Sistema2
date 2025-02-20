@@ -4,6 +4,7 @@ https://github.com/95Caique/sistema_1
 O intuido é cadastrar os usuários apenas uma vez e importa-los nos demais sistemas.
 
 1 - Para executar, clone o repostório
+git clone git@github.com:95Caique/Sistema2.git
 
 2 - Navegue até a pasta do projeto com o comando cd sistema2
 
@@ -23,3 +24,4 @@ o Sistema2 é executado na 8011.
 Com os dois sistemas rodando (Sistema 1 e Sistema 2), no sistema2 navegue até a pasta importador 
 e execute o comando import.py e retornará os dados da pessoa selecionada.  Ou clique com o botão esquerdo do mouse
 em impor.py e selecione Run import.py.
+
